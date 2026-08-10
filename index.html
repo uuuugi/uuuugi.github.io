@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안병욱 | AI Engineer Portfolio</title>
+    <meta name="description" content="AI 엔지니어 안병욱의 포트폴리오 웹사이트입니다. 딥페이크 감지 연구, AI 음성합성, 자동 트레이딩 시스템 등의 프로젝트 경험을 소개합니다.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Blur Decorative Elements -->
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
+    <!-- Header / Navigation -->
+    <header id="header">
+        <div class="header-container container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Byeonguk.An<span class="logo-accent">/&gt;</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="테마 전환">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <button id="mobile-menu-toggle" class="icon-btn mobile-only" aria-label="메뉴 열기">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section section-padding">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge fade-in">Available for Work</div>
+                    <h1 class="hero-title fade-in">
+                        안녕하세요, <br>
+                        모델 연구와 시스템 최적화를 <br>
+                        연결하는 <span class="text-gradient">AI &amp; System 엔지니어</span> <br>
+                        안병욱입니다.
+                    </h1>
+                    <p class="hero-description fade-in">
+                        최신 AI 모델을 연구하여 실 서비스 환경에 맞게 최적화하고 배포하는 <strong>AI &amp; System 엔지니어</strong> 안병욱입니다.
+                        단순히 알고리즘을 학습시키는 것을 넘어, 이종 아키텍처 간 통신 브릿지 설계 및 디스크 I/O 최적화 등 AI 시스템의 실질적인 성능 한계를 극복하는 과정에서 즐거움을
+                        느낍니다.
+                    </p>
+                    <div class="hero-buttons fade-in">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>프로젝트 보기</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="https://github.com/uuuugi" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-outline">
+                            <i data-lucide="github"></i>
+                            <span>GitHub 방문</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in">
+                    <div class="visual-card">
+                        <div class="card-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="file-name">developer.json</span>
+                        </div>
+                        <pre class="code-editor"><code>{
+  <span class="key">"name"</span>: <span class="string">"안병욱"</span>,
+  <span class="key">"birth"</span>: <span class="string">"1999.04.05"</span>,
+  <span class="key">"role"</span>: <span class="string">"AI &amp; System Engineer"</span>,
+  <span class="key">"specialty"</span>: [
+    <span class="string">"AI Research &amp; Adaptation"</span>,
+    <span class="string">"System Optimization"</span>
+  ],
+  <span class="key">"mindset"</span>: [
+    <span class="string">"Ownership"</span>,
+    <span class="string">"Deep-Thinking"</span>,
+    <span class="string">"Optimization"</span>
+  ],
+  <span class="key">"contact"</span>: {
+    <span class="key">"email"</span>: <span class="string">"hhjjkk7186@gmail.com"</span>,
+    <span class="key">"github"</span>: <span class="string">"github.com/uuuugi"</span>
+  }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">ABOUT ME</span>
+                    <h2 class="section-title">소개</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-info">
+                        <h3 class="about-heading">단순히 서비스를 만드는 메이커가 아닌, 가치를 고민하는 개발자.</h3>
+                        <div class="about-details">
+                            <div class="detail-card">
+                                <div class="detail-icon"><i data-lucide="search"></i></div>
+                                <div>
+                                    <h4>연구(Research)와 구현(Engineering)의 연결</h4>
+                                    <p>학술 논문에 게재된 최신 인공지능 아키텍처(Gated Fusion, Mamba-SSM, TCN 등)를 분석하여 실질적인 비즈니스 가치로
+                                        변환합니다. 수만 장의 데이터셋 구축부터 모델 경량화 및 웹 API 전환까지, AI 개발의 전 과정을 주도적으로 해결합니다.</p>
+                                </div>
+                            </div>
+                            <div class="detail-card">
+                                <div class="detail-icon"><i data-lucide="zap"></i></div>
+                                <div>
+                                    <h4>시스템 관점에서의 병목 제어</h4>
+                                    <p>모델의 처리 속도 지연(Latency), 메모리 리소스 한계, 이종 시스템 간의 통신 충돌 등 AI 배포 장벽을 엔지니어링 관점에서 쪼개어
+                                        분석합니다. 캐싱 기법 도입 및 프로세스 분리 설계를 통해 시스템 최적화를 추구합니다.</p>
+                                </div>
+                            </div>
+                            <div class="detail-card">
+                                <div class="detail-icon"><i data-lucide="briefcase"></i></div>
+                                <div>
+                                    <h4>실무 기반의 풀스택 경험</h4>
+                                    <p>부동산뱅크 개발팀에서의 실무 경험을 통해 안정적인 백엔드 시스템 및 데이터베이스 관리 역량을 다졌습니다. 실무 프로덕션 환경의 중요성을 이해하며,
+                                        비즈니스 목표에 부합하는 견고하고 확장 가능한 프로덕트 설계에 강점이 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-timeline-container">
+                        <h3 class="timeline-title"><i data-lucide="briefcase"></i> 경력 및 학력</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2019. 03 - 2025. 08</div>
+                                <div class="timeline-content">
+                                    <h4>한신대학교 컴퓨터공학부</h4>
+                                    <p>학사 졸업</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2021. 07 - 2023. 08</div>
+                                <div class="timeline-content">
+                                    <h4>부동산뱅크 개발팀</h4>
+                                    <p>풀스택 개발 및 서버 유지보수</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">MY SKILLSET</span>
+                    <h2 class="section-title">보유 기술</h2>
+                </div>
+
+                <div class="skills-container">
+                    <!-- AI & Data Science -->
+                    <div class="skills-category">
+                        <h3 class="category-title"><i data-lucide="cpu"></i> AI & Data Science</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag highlighted">Python</span>
+                            <span class="skill-tag highlighted">PyTorch</span>
+                            <span class="skill-tag">InceptionResNetV2</span>
+                            <span class="skill-tag">Mamba-SSM</span>
+                            <span class="skill-tag">Spleeter / RVC</span>
+                            <span class="skill-tag">FAISS</span>
+                            <span class="skill-tag">TCN</span>
+                            <span class="skill-tag">timm</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Systems -->
+                    <div class="skills-category">
+                        <h3 class="category-title"><i data-lucide="server"></i> Backend & Systems</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">VS Code API</span>
+                            <span class="skill-tag">PyQt5</span>
+                        </div>
+                    </div>
+
+                    <!-- Database & DevOps -->
+                    <div class="skills-category">
+                        <h3 class="category-title"><i data-lucide="database"></i> Database & DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag highlighted">Docker</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Oracle</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag highlighted">CentOS</span>
+                            <span class="skill-tag">Git / GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">PORTFOLIO PROJECTS</span>
+                    <h2 class="section-title">프로젝트</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Web Compiler (se_editor) -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder">
+                            <i data-lucide="code" class="placeholder-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">JSP</span>
+                                <span class="project-tag">MySQL</span>
+                                <span class="project-tag">Monaco Editor</span>
+                            </div>
+                            <h3 class="project-title">웹 컴파일러 시스템 (se_editor)</h3>
+                            <p class="project-desc">
+                                브라우저 상에서 코드를 입력하고 실시간으로 컴파일 및 실행할 수 있는 Monaco Editor 연동 IDE 형태의 웹 시스템입니다.
+                            </p>
+
+                            <!-- Slide Panel -->
+                            <div class="project-details-panel" id="details-compiler">
+                                <div class="info-group">
+                                    <strong>작업 기간</strong>
+                                    <p>2020. 07 - 2020. 12</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>역할 (Web Fullstack)</strong>
+                                    <p>프론트엔드 개발 일정 관리, 회원가입/로그인(Auth), 마이페이지, Monaco Editor 연동 IDE 개발, DB 구조 설계 및 MVC 패턴
+                                        적용</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>구성원</strong>
+                                    <p>김동건 (PM, Docker), 안병욱 (Front, Back, DB), 이상호 (AWS), 황인준 (Front)</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>핵심 기능 및 구현</strong>
+                                    <p>C, Java, Python, JavaScript 언어 지원을 위해 언어별 Monaco Editor 컨테이너를 동적으로 스왑하는 스크립트를
+                                        구현했으며, SMTP 이메일 인증을 동반한 회원가입 및 2분 30초 유효 세션 제한의 임시 비밀번호 변경 기능을 설계하였습니다.</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>프로젝트 회고</strong>
+                                    <ul>
+                                        <li>선배들과 함께 작업한 생애 첫 팀 프로젝트였습니다. 당시 기초가 많이 부족한 상황이어서 매일 기술 공부와 프로젝트 개발을 악착같이
+                                            병행하며 진행했습니다.</li>
+                                        <li>처음 다뤄보는 SMTP 이메일 인증 기능 구현을 통해 큰 성장을 거두었으며, 서비스 로깅의 중요성과 초기 DB 설계가 전체 생산성에
+                                            미치는 지대한 영향을 절실히 배운 계기가 되었습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline show-details-btn" data-project="compiler"
+                                style="width: 100%; margin-top: auto;">
+                                <span>상세 정보 및 회고</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+
+                            <div class="project-links" style="margin-top: 16px;">
+                                <a href="https://github.com/uuuugi/se_editor" target="_blank" rel="noopener noreferrer"
+                                    class="project-link">
+                                    <i data-lucide="github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Deepfake Detection (DeepFake-Detection) -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder blue-tint">
+                            <i data-lucide="eye" class="placeholder-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">PyTorch</span>
+                                <span class="project-tag">Flask</span>
+                                <span class="project-tag">FAISS</span>
+                            </div>
+                            <h3 class="project-title">딥페이크 감지 방법 연구</h3>
+                            <p class="project-desc">
+                                RGB, SRM 주파수 노이즈 및 Face X-Ray 경계를 융합하는 CFL-Net 기반 다중 시각 딥페이크 탐지 및 실시간 웹 분석 시스템입니다.
+                            </p>
+
+                            <!-- Slide Panel -->
+                            <div class="project-details-panel" id="details-deepfake">
+                                <div class="info-group">
+                                    <strong>작업 기간</strong>
+                                    <p>2024. 09 - 2025. 07</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>역할 (PM)</strong>
+                                    <p>연구 방향성 선정, 팀원 간 연구 일정 및 태스크 분담, 모델 융합 및 훈련 주도, 결과 분석 및 논문 작성</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>구성원</strong>
+                                    <p>안병욱 (PM), 송은석 (팀원), 김민정 (팀원)</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>핵심 엔지니어링 & 성과</strong>
+                                    <p>RGB, SRM, Face X-Ray 스트림의 동적 가중합을 산출하는 <strong>Gated Fusion (CFL-Net)</strong>
+                                        모델을 구현하고, ASPP 다중 팽창 비율(1, 6, 12, 18) 모듈을 결합하였습니다. <strong>FAISS L2
+                                            인덱싱</strong>을 활용해 5만 장의 2D 얼굴 랜드마크 비교 탐색 속도를 1ms 미만으로 단축했으며, PyTorch AMP
+                                        혼합정밀도 기법으로 GPU 메모리 사용량을 50% 절감했습니다. 제안 모델은 <strong>테스트 정확도 89.27%, AUC 0.9607,
+                                            F1-Score 0.8903</strong>을 기록하며 최고 성능을 입증했습니다.</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>프로젝트 회고</strong>
+                                    <ul>
+                                        <li>학부 수준에서 다루기 높은 난이도의 딥러닝 응용 논문 주제였으나, 성공적으로 완성도 높은 졸업 논문으로 마무리할 수 있어 뿌듯했습니다.
+                                        </li>
+                                        <li>방대한 고해상도 안면 이미지 전처리 작업 시 GPU 연산 리소스가 부족하여 파이프라인 병목 제어 및 배치 최적화 코드를 짜는 데 많은
+                                            공을 들였습니다.</li>
+                                        <li>최신 비전 신경망의 퓨전 아키텍처에 대해 깊게 고찰할 수 있는 학술적인 디딤돌이 되었습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline show-details-btn" data-project="deepfake"
+                                style="width: 100%; margin-top: auto;">
+                                <span>상세 정보 및 회고</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+
+                            <div class="project-links" style="margin-top: 16px;">
+                                <a href="https://github.com/uuuugi/DeepFake-Detection" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    <i data-lucide="github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: AI Voice Synthesis (RVC-AutoMix-API) -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder purple-tint">
+                            <i data-lucide="music" class="placeholder-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">FastAPI</span>
+                                <span class="project-tag">PyTorch</span>
+                                <span class="project-tag">Spleeter</span>
+                            </div>
+                            <h3 class="project-title">AI 음성합성 사이트 (RVC-AutoMix)</h3>
+                            <p class="project-desc">
+                                RVC 기술을 기반으로 외부 연동 API를 설계하고, 업로드한 음원 파일에서 보컬과 반주를 자동 분리/합성해 주는 믹싱 API 시스템입니다.
+                            </p>
+
+                            <!-- Slide Panel -->
+                            <div class="project-details-panel" id="details-voice">
+                                <div class="info-group">
+                                    <strong>작업 기간</strong>
+                                    <p>2024. 03 - 2024. 06</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>역할 (PM)</strong>
+                                    <p>프로젝트 기획 및 일정 관리, AI 파이프라인 아키텍처 설계, Gradio RVC 프로젝트를 웹 API로 전환 및 최적화 수정</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>구성원</strong>
+                                    <p>안병욱 (PM), 홍인선 (팀원)</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>파이프라인 및 구현 아키텍처</strong>
+                                    <p>음원 업로드 시 FastAPI 엔드포인트에서 비동기로 요청을 접수하며, Spleeter(2stems) 모델로 음원 내 보컬과 반주를 분리한 뒤,
+                                        PyTorch RVC 추론 엔진을 통해 타겟 목소리로 오디오 변환을 수행하고 PyDub를 활용하여 반주와의 고음질 믹싱 및 정밀 오버레이를 동적
+                                        자동화하는 전체 아키텍처를 구현했습니다. ngrok 로컬 포트 터널링 기능을 통해 외부 서비스 연동 편의성을 증대시켰습니다.</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>프로젝트 회고</strong>
+                                    <ul>
+                                        <li>Gradio로만 단독 실행되던 프로토타입 형태의 RVC 소스코드를 FastAPI 백엔드 시스템과 결합하여 완결성 있는 웹 서비스 형태로
+                                            이식했습니다.</li>
+                                        <li>ChatGPT를 적극적으로 코딩에 적용하기 시작한 첫 프로젝트였는데, 초반에는 도구 사용의 미숙함으로 인해 오히려 작업 오버헤드가 발생해
+                                            개발 방법론에 대한 깊은 자가 피드백을 가졌습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline show-details-btn" data-project="voice"
+                                style="width: 100%; margin-top: auto;">
+                                <span>상세 정보 및 회고</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+
+                            <div class="project-links" style="margin-top: 16px;">
+                                <a href="https://github.com/uuuugi/RVC-AutoMix-API" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    <i data-lucide="github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Mamba Trading (MambaTrader) -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder">
+                            <i data-lucide="trending-up" class="placeholder-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">PyQt5</span>
+                                <span class="project-tag">FastAPI</span>
+                                <span class="project-tag">Mamba-SSM</span>
+                            </div>
+                            <h3 class="project-title">Mamba 주가 예측 및 자동매매</h3>
+                            <p class="project-desc">
+                                Mamba(Selective State Space Model)를 기반으로 시계열 데이터를 학습하고 키움증권 OpenAPI와 연동하여 동작하는 자동 매매
+                                시스템입니다.
+                            </p>
+
+                            <!-- Slide Panel -->
+                            <div class="project-details-panel" id="details-trading">
+                                <div class="info-group">
+                                    <strong>작업 기간</strong>
+                                    <p>2024. 09 - 2024. 12</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>역할 (PM)</strong>
+                                    <p>개발 일정 조율 및 프로젝트 리드, Mamba-SSM 시계열 모델 학습, Kiwoom Open API 인터페이스 연동 개발 및 통신 스레딩 최적화
+                                    </p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>구성원</strong>
+                                    <p>안병욱 (PM), 김성아 (팀원), 나서이 (팀원)</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>주요 해결 이슈 (32bit vs 64bit)</strong>
+                                    <p>32비트만을 엄격하게 강제하는 Kiwoom OpenAPI(C++ OCX 연동 모듈)와 64비트 리눅스 환경 위에서만 구동되는 PyTorch
+                                        Mamba-SSM 모델 간의 이종 아키텍처 호환성 충돌 문제를 해결하기 위해, PyQt5(32bit) 클라이언트와 FastAPI(64bit)
+                                        AI 추론 서버 간 로컬 네트워크 통신 레이어를 가설하여 파이프라인을 완전히 분리 연결하였습니다.</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>핵심 기능</strong>
+                                    <p>종가(Close), 5일 이동평균선(SMA), 5일 지수이동평균선(EMA) 피처를 시퀀스로 인식해 다음 시점 예측 수익률(pct_chg)을
+                                        계산하며, R2, RMSE 등의 모델 지표를 취합하여 예측의 안전성과 신뢰도를 보여주는 자체 **S-Score 지표**를 대시보드상에
+                                        구현했습니다. QThread를 동원해 키움 OCX 작업 흐름을 독립적으로 제어합니다.</p>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline show-details-btn" data-project="trading"
+                                style="width: 100%; margin-top: auto;">
+                                <span>상세 정보 및 회고</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+
+                            <div class="project-links" style="margin-top: 16px;">
+                                <a href="https://github.com/uuuugi/MambaTrader" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    <i data-lucide="github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Brand Finder (brand-finder) -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder blue-tint">
+                            <i data-lucide="image" class="placeholder-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">Servlet</span>
+                                <span class="project-tag">MySQL</span>
+                                <span class="project-tag">TensorFlow</span>
+                            </div>
+                            <h3 class="project-title">B-Finder (브랜드 파인더)</h3>
+                            <p class="project-desc">
+                                HTML5 Canvas에 직접 그린 로고나 업로드 이미지를 InceptionResNetV2 모델로 분류하고 해당 브랜드 메타데이터를 매칭하는 하이브리드
+                                웹입니다.
+                            </p>
+
+                            <!-- Slide Panel -->
+                            <div class="project-details-panel" id="details-logo">
+                                <div class="info-group">
+                                    <strong>작업 기간</strong>
+                                    <p>2023. 10 - 2023. 11</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>역할 (PM)</strong>
+                                    <p>일정 조율 및 프로젝트 전반적인 리딩, 13종 브랜드 로고 수집기(크롤러) 설계, InceptionResNetV2 전이학습 및 파인튜닝, 웹 연동
+                                        실시간 테스트베드 구현</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>구성원</strong>
+                                    <p>안병욱 (PM), 허준범 (팀원)</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>아키텍처 및 구현</strong>
+                                    <p>JSP 페이지의 Canvas API에서 사용자가 그린 이미지의 픽셀 데이터를 Fetch API를 통해 Java Servlet 백엔드로 송신합니다.
+                                        Servlet은 ProcessBuilder 프로세스를 기동하여 Python의 Keras InceptionResNetV2 모델로 실시간
+                                        추론(Final.h5)을 지시하고, 도출된 결과 명칭을 바탕으로 MySQL 데이터베이스에서 공식 URL과 상세 소개 정보를 쿼리하여 모달창으로
+                                        출력해 줍니다.</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>프로젝트 회고</strong>
+                                    <ul>
+                                        <li>개인적으로 처음 착수했던 인공지능(AI) 접목 프로젝트였기에 초기 아키텍처나 가중치 관리 기법의 완성도 측면에서 아쉬움이 남았습니다.
+                                        </li>
+                                        <li>당시 딥러닝 이론 지식이 부족한 시점이었기에, 각종 전처리 논문과 전이학습 레이어 튜닝 가이드를 하나하나 번역해가며 밤낮없이 독학하는
+                                            과정에서 큰 재미를 붙였습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline show-details-btn" data-project="logo"
+                                style="width: 100%; margin-top: auto;">
+                                <span>상세 정보 및 회고</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+
+                            <div class="project-links" style="margin-top: 16px;">
+                                <a href="https://github.com/uuuugi/brand-finder" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    <i data-lucide="github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Duplicator AIO (regime-adaptive-ai-trader) -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder green-tint">
+                            <i data-lucide="bar-chart-2" class="placeholder-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">PyTorch</span>
+                                <span class="project-tag">CCXT</span>
+                                <span class="project-tag">FastAPI</span>
+                            </div>
+                            <h3 class="project-title">레짐 적응형 AI 자동매매 (Duplicator AIO)</h3>
+                            <p class="project-desc">
+                                시장 국면(추세/조정)에 따라 전략 모드를 동적으로 제어하고 TCN 및 Transformer 앙상블로 암호화폐 무기한 선물을 자동 매매하는 시스템입니다.
+                            </p>
+
+                            <!-- Slide Panel -->
+                            <div class="project-details-panel" id="details-duplicator">
+                                <div class="info-group">
+                                    <strong>작업 기간</strong>
+                                    <p>2026. 01 - 2026. 04</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>역할 (AI & System Development)</strong>
+                                    <p>PyTorch 다중 타임프레임 추론 엔진 구현, RandomForest 기반 Meta-Supervisor 앙상블 구축, Hot Cache 파일
+                                        캐시 시스템 설계, CCXT 비동기 실행 루프 최적화</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>1인 단독 프로젝트</strong>
+                                    <p>기획, 시스템 아키텍처 모델 설계, DB 및 로깅 모니터링 대시보드 구축 전 과정 1인 개발</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>핵심 기술적 해결</strong>
+                                    <ul>
+                                        <li><strong>다중 타임프레임(Multi-Horizon) 앙상블:</strong> 종목당 4개의 전용 모델(Multi-Head TCN 및
+                                            Self-Attention Transformer)이 병렬 추론을 수행하고, Meta-Supervisor(RF 분류기)가 3개의
+                                            타임프레임(Scalp, Swing, Trend) 확률 산출물을 병합해 최종 3클래스 신호를 도출합니다.</li>
+                                        <li><strong>Hot Cache 파일 시스템:</strong> 전체 히스토리를 파싱하는 대신 룩백 윈도우(100~300 바)만
+                                            슬라이싱하는 Hot Cache 시스템(`minute1_hot.csv`)을 구축해 디스크 I/O를 최적화하고, 데이터 연산 속도를 종목당
+                                            10ms 이하로 단축시켰습니다.</li>
+                                        <li><strong>Lookahead Bias 차단:</strong> 실시간 Z-Score/Min-Max 정규화 파이프라인에서 미래 정보
+                                            참조가 일어나지 않도록 텐서 차원을 엄밀히 분리 설계했습니다.</li>
+                                        <li><strong>모니터링 대시보드:</strong> Uvicorn 비동기 비동기 이벤트 루프 내에서 WebSocket과 FastAPI를
+                                            사용해 실시간 거래 정보 모니터링 화면을 포트 8000에 띄워 제공합니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="info-group">
+                                    <strong>성과 및 검증</strong>
+                                    <p>가상 계좌 실거래 테스트베드 28일 구동 결과, <strong>총 622회 매매 동안 승률 57.88%</strong>를 달성했으며 상위
+                                        종목(SAND/OP/SEI/SOL)군에서는 69%~82%의 높은 높은 승률 성과를 도출했습니다. 이익을 보존하는 Tight Trail 및
+                                        Surge Trail 스탑 알고리즘이 효과적으로 작동함을 확인했습니다.</p>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline show-details-btn" data-project="duplicator"
+                                style="width: 100%; margin-top: auto;">
+                                <span>상세 정보 및 회고</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+
+                            <div class="project-links" style="margin-top: 16px;">
+                                <a href="https://github.com/uuuugi/regime-adaptive-ai-trader" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    <i data-lucide="github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: voiceGravity (VoiceGravity) -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder purple-tint">
+                            <i data-lucide="mic" class="placeholder-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">VS Code API</span>
+                                <span class="project-tag">STT / TTS</span>
+                            </div>
+                            <h3 class="project-title">voiceGravity: IDE 오프라인 음성 제어</h3>
+                            <p class="project-desc">
+                                외부 API 비용 없이 100% 로컬 환경에서 음성 인식을 수행하고 HTTP 브릿지를 거쳐 IDE를 제어하는 하이브리드 어시스턴트입니다.
+                            </p>
+
+                            <!-- Slide Panel -->
+                            <div class="project-details-panel" id="details-voicegravity">
+                                <div class="info-group">
+                                    <strong>작업 기간</strong>
+                                    <p>2026. 06 - 2026. 07</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>역할 (Fullstack Development)</strong>
+                                    <p>VS Code Extension 브릿지 서버(Node.js) 설계, Python 음성 리스너 스레드 설계 및 자동 기동 라이프사이클 개발, 설정
+                                        관리 패널 UI 구축</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>1인 단독 프로젝트</strong>
+                                    <p>Node.js 익스텐션과 로컬 Python 오디오 API 간의 파이프라인 개발 및 연동 테스트 패키징 1인 구현</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>아키텍처 및 구현 방식</strong>
+                                    <ul>
+                                        <li><strong>하이브리드 프로세스 브릿지:</strong> IDE 기동 시 Node.js 익스텐션이 Python 백엔드를 서브 프로세스로
+                                            자동 실행하며, port 48192에서 통신하는 브릿지 API를 가설하여 세션 충돌 방지 락파일 구조를 운용합니다. 특히 여러 개의 IDE 인스턴스가 기동되어 있을 경우, active window 포커스 이벤트를 실시간 트래킹하여 <strong>가장 최근에 포커싱된 창으로 음성 명령이 안전하게 라우팅</strong>되도록 예외 처리했습니다.</li>
+                                        <li><strong>오프라인 오디오 파이프라인:</strong> PyAudio 수집 스트림에 SpeechRecognition 및 Windows
+                                            SAPI5 COM 스레드 관리를 적용해, CPU 및 VRAM 부담을 주지 않는 로컬 마이크 자동 캘리브레이션 및 음량 조절 모듈을
+                                            연동했습니다.</li>
+                                        <li><strong>작업 흐름 비방해(Clipboard Bypass):</strong> 호출어("안티그래비티", "gravity") 감지 후
+                                            음성 명령 텍스트를 클립보드를 오염시키지 않고 HTTP API를 통해 IDE 에이전트 입력 패널에 직접 문자 입력 형태로 실시간 주입한
+                                            뒤, 포커스를 작업 창으로 즉시 반환시킵니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="info-group">
+                                    <strong>핵심 기능 및 사용자 경험</strong>
+                                    <p>호출어("안티그래비티", "gravity") 감지 시 백그라운드 리스너가 즉각 반응하여 음성 명령을 실시간 제어 스크립트로 치환하며, 사용자의 작업 흐름을 깨뜨리지 않는 비침습적 클립보드 우회 주입(Bypass) 기법을 구현했습니다. 또한 VS Code 전용 GUI 설정 패널을 통해 로컬 마이크 감도 및 포트 설정을 손쉽게 제어할 수 있습니다.</p>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline show-details-btn" data-project="voicegravity"
+                                style="width: 100%; margin-top: auto;">
+                                <span>상세 정보 및 회고</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+
+                            <div class="project-links" style="margin-top: 16px;">
+                                <a href="https://github.com/uuuugi/VoiceGravity" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    <i data-lucide="github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">SAY HELLO</span>
+                    <h2 class="section-title">연락하기</h2>
+                </div>
+
+                <div class="contact-container">
+                    <h3 class="contact-heading">함께 도전하고 성장할 기회를 기다립니다.</h3>
+                    <p class="contact-text">
+                        의미 있는 솔루션을 도출하는 일이라면 어떤 제안이든 열려 있습니다.
+                        이메일 혹은 소셜 채널을 통해 편하게 연락해 주세요.
+                    </p>
+
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i data-lucide="mail"></i></div>
+                            <div class="contact-detail">
+                                <span>이메일</span>
+                                <a href="mailto:hhjjkk7186@gmail.com">hhjjkk7186@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i data-lucide="phone"></i></div>
+                            <div class="contact-detail">
+                                <span>연락처</span>
+                                <a href="tel:010-2473-5768">010-2473-5768</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                            <div class="contact-detail">
+                                <span>위치</span>
+                                <p>Daejeon / Seoul, South Korea</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 안병욱 (An Byeonguk). All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/uuuugi" target="_blank" rel="noopener noreferrer"><i
+                        data-lucide="github"></i></a>
+                <a href="mailto:hhjjkk7186@gmail.com"><i data-lucide="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Expansion Modal -->
+    <div id="project-modal" class="project-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button id="modal-close-btn" class="modal-close-btn" aria-label="상세 정보 닫기">
+                <i data-lucide="x"></i>
+            </button>
+            <div id="modal-body" class="modal-body">
+                <!-- Content is dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
