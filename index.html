@@ -14,7 +14,7 @@
         rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
 </head>
 
 <body>
@@ -196,6 +196,8 @@
                         <div class="skill-tags">
                             <span class="skill-tag highlighted">Python</span>
                             <span class="skill-tag highlighted">PyTorch</span>
+                            <span class="skill-tag highlighted">Transformers</span>
+                            <span class="skill-tag">Constrained Decoding</span>
                             <span class="skill-tag">InceptionResNetV2</span>
                             <span class="skill-tag">Mamba-SSM</span>
                             <span class="skill-tag">Spleeter / RVC</span>
@@ -697,6 +699,80 @@
                                 <a href="https://github.com/uuuugi/VoiceGravity" target="_blank"
                                     rel="noopener noreferrer" class="project-link">
                                     <i data-lucide="github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: GCLM (Goal-Conditioned Reachability Logit Masker) -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder amber-tint">
+                            <i data-lucide="target" class="placeholder-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">PyTorch</span>
+                                <span class="project-tag">Transformers</span>
+                                <span class="project-tag">Constrained Decoding</span>
+                                <span class="project-tag">FSM / DFA</span>
+                            </div>
+                            <h3 class="project-title">Goal-Conditioned Reachability Logit Masker (GCLM)</h3>
+                            <p class="project-desc">
+                                LLM 제약 디코딩 시 데드엔드 트랩 진입과 토큰 예산 초과로 인한 문법 절단을 원천 차단하는 O(1) 시간 복잡도의 목표 조건부 도달가능성 로짓 마스킹 엔진입니다.
+                            </p>
+
+                            <!-- Slide Panel -->
+                            <div class="project-details-panel" id="details-gclm">
+                                <div class="info-group">
+                                    <strong>작업 기간</strong>
+                                    <p>2026. 08 - 2026. 09</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>역할 (AI Research & Open Source)</strong>
+                                    <p>이론적 정식화(Time-Bounded Backward Reachability), 벡터화 역방향 BFS 도달가능성 알고리즘 설계, Hugging Face LogitsProcessor 호환 모듈 개발, 데드엔드 회피 벤치마크 및 논문 작성</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>1인 연구 및 오픈소스 개발</strong>
+                                    <p>FSM 컴파일러 설계부터 오프라인 텐서 빌더, O(1) 런타임 인플레이스 마스커 구현, 학술 논문(PDF) 작성 및 Hugging Face 패키지 배포까지 전 과정 1인 주도 개발</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>문제 정의 및 기존 기법(Outlines / SGLang)의 한계</strong>
+                                    <p>기존의 Outlines, SGLang 등 전방향(Forward) DFA 기반 제약 디코딩 마스커는 현재 상태에서 전이 가능한지만 검사합니다. 이로 인해 생성 도중 빠져나올 수 없는 데드엔드 트랩(Dead-End Trap)에 진입하거나, 토큰 예산(T_max) 소진 시 종결 문법(예: JSON 닫는 괄호 '}')이 완성되지 못하고 잘려버려(Truncated Syntax) 파싱 에러가 발생하는 근본적인 한계가 존재했습니다.</p>
+                                </div>
+                                <div class="info-group">
+                                    <strong>핵심 아키텍처 및 구현 방식</strong>
+                                    <ul>
+                                        <li><strong>시간 바운드 역방향 BFS 도달가능성 테이블 구축:</strong> 생성 시작 전, FSM 전이 관계와 최대 토큰 예산(T_max)을 기반으로 수락/목표 상태(S_goal)로부터 역방향 BFS를 완전 벡터화(Vectorized)하여 (T_max + 1, |S|) 크기의 텐서 R을 사전 연산합니다.</li>
+                                        <li><strong>Strict O(1) 런타임 인플레이스 마스킹:</strong> 디코딩 매 스텝마다 남은 토큰 수(T_rem) 내에 목표 상태에 도달할 수 없는 전이 토큰을 엄격한 O(1) 벡터화 인덱싱으로 즉시 판별하여 -inf로 인플레이스 마스킹(평균 오버헤드 0.1ms 미만)합니다.</li>
+                                        <li><strong>토큰 예산 초과 전 조기 문법 종결 강제:</strong> 토큰 예산이 소진되기 직전 유효한 문법 종결 경로만을 강제함으로써, 토큰 제약 환경에서도 문법 파싱 실패율 0%를 달성합니다.</li>
+                                        <li><strong>상태 수 무관 제로 런타임 종속성 (Zero Runtime Dependence):</strong> FSM 상태 수(|S|)가 증가하더라도 런타임 토큰당 처리 오버헤드가 증가하지 않고 O(1) 텐서 룩업으로 처리되어 LLM 추론 지연 시간(Latency)에 영향을 미치지 않습니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="info-group">
+                                    <strong>성과 및 오픈소스 배포</strong>
+                                    <p>학술 논문(paper.pdf) 작성 및 GitHub 리포지토리 오픈소스 공개. Hugging Face 오픈소스 패키지(uuugi/gclm-constrained-decoding) 배포 완료. 표준 Forward DFA 대비 데드엔드 트랩 회피율 100% 달성 및 토큰 예산 내 문법 완결성을 검증했습니다.</p>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline show-details-btn" data-project="gclm"
+                                style="width: 100%; margin-top: auto;">
+                                <span>상세 정보 및 회고</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+
+                            <div class="project-links" style="margin-top: 16px;">
+                                <a href="https://github.com/uuuugi/Goal-Conditioned-Reachability-Logit-Masker" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    <i data-lucide="github"></i> Repository
+                                </a>
+                                <a href="https://huggingface.co/uuugi/gclm-constrained-decoding" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    <i data-lucide="external-link"></i> Hugging Face
+                                </a>
+                                <a href="https://github.com/uuuugi/Goal-Conditioned-Reachability-Logit-Masker/blob/main/paper.pdf" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    <i data-lucide="file-text"></i> Paper (PDF)
                                 </a>
                             </div>
                         </div>
